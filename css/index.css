@@ -1,0 +1,250 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;500;700&display=swap");
+
+* {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Asegura que padding y border están incluidos en width/height */
+}
+
+body {
+  box-sizing: border-box;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("img/clima.jpg");
+  height: 100vh;
+  padding: 20px; /* Añade un poco de padding alrededor de los bordes */
+}
+
+#city-form {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 320px;
+  height: 90px;
+  background: rgba(243, 246, 246, 0.8) 100%;
+  border-radius: 9px;
+  box-shadow: 0px 2px 10px gray;
+}
+
+.container1 {
+  display: flex;
+  justify-content: center;
+  display: flex;
+  justify-content: center;
+  width: 100%; /* Ocupa todo el ancho disponible */
+  max-width: 600px; /* Limita el ancho máximo */
+  margin: auto; /* Centra horizontalmente */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombras más sutiles */
+}
+
+.item-form {
+  text-align: center;
+  padding: 2%;
+}
+
+.item-form ::placeholder {
+  color: rgba(134, 128, 128, 0.411);
+  text-align: center;
+}
+
+#weather-form {
+  display: flex;
+  margin: 5vh;
+}
+
+#def-option {
+  color: darkgray;
+  text-transform: none;
+}
+
+.select-city {
+  text-transform: capitalize;
+  box-shadow: 0px 2px 10px grey;
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px; /* Añade un espacio entre botones */
+  padding: 10px; /* Espaciado interno */
+  border-radius: 5px; /* Bordes menos redondeados */
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.buttons i {
+  font-size: 24px; /* Tamaño de icono más grande */
+  margin: 10px;
+  color: #333; /* Color más oscuro para mejor contraste */
+  transition: color 0.3s; /* Transición suave para el hover */
+}
+.buttons i:hover {
+  color: #0066cc; /* Cambio de color al pasar el mouse */
+}
+
+#load-button {
+  padding: 5%;
+  border-radius: 10%;
+  box-shadow: 0px 2px 10px grey;
+}
+
+.container#city-weather {
+  display: none;
+  width: 80vh;
+  height: 60vh;
+  background: rgba(243, 246, 246, 0.8) 100%;
+  border-radius: 9px;
+  padding: 30px;
+  box-shadow: 0px 2px 10px gray;
+}
+
+#city-name,
+#load-button {
+  font-size: 1em;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#city-name {
+  color: rgb(0, 0, 0);
+}
+
+#left-display,
+#footer-display,
+#right-display {
+  margin: 1em;
+}
+
+#footer-display {
+  text-align: center;
+}
+
+#intro {
+  font-size: 1em;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+#city {
+  font-size: 2.5em;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: steelblue;
+}
+
+#temp {
+  font-size: 5em;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+#date {
+  font-size: 1em;
+  font-weight: 500;
+  margin-bottom: 1em;
+  color: rgb(116, 121, 121);
+}
+
+#feels-like,
+#humidity,
+#pressure,
+#visibility {
+  font-size: 1em;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.5);
+  padding: 1%;
+}
+
+#description {
+  font-size: 1.4em;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 0.5em;
+  color: steelblue;
+}
+
+#icon {
+  width: 10em;
+}
+
+#temp-min,
+#temp-max {
+  font-size: 1.5em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+@media only screen and (max-width: 812px) {
+  body {
+    height: 150vh;
+  }
+
+  .container#city-weather {
+    width: 37vh;
+    height: 54vh;
+  }
+
+  .buttons i {
+    font-size: 1.5em;
+    margin: 10px;
+  }
+
+  #left-display,
+  #footer-display,
+  #right-display {
+    margin: 0em;
+  }
+
+  #right-display {
+    text-align: right;
+  }
+
+  #temp {
+    font-size: 2.3em;
+    font-weight: 600;
+  }
+
+  #city {
+    font-size: 1.3em;
+  }
+
+  #description {
+    font-size: 1em;
+    margin-bottom: 0.5em;
+  }
+
+  #temp-min,
+  #temp-max {
+    font-size: 1em;
+  }
+
+  #icon {
+    font-size: 0.7em;
+  }
+
+  .buttons i {
+    font-size: 1.1em;
+    margin: 10px;
+  }
+
+  #footer-display {
+    margin-top: 1.3em;
+  }
+}

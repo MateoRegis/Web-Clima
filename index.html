@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TP Integrador</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="js/index.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+  </head>
+
+  <body>
+    <div class="container1" id="weather-form">
+      <select name="select-city" class="select-city" id="select-city">
+        <option id="def-option" value="" disabled selected>
+          --Seleccione ciudad--
+        </option>
+      </select>
+      <div class="buttons">
+        <button title="Agregar Ciudad" onclick="showAddCity()">
+          <i class="fas fa-plus" id="new-city"></i>
+        </button>
+        <button title="Borrar Ciudad" onclick="deleteCity()">
+          <i class="fas fa-trash-alt"></i>
+        </button>
+        <button title="Mostrar Clima" onclick="showCityWeather()">
+          <i class="fas fa-cloud-sun"></i>
+        </button>
+      </div>
+    </div>
+    <div class="container2" id="city-form">
+      <div class="item-form">
+        <input
+          type="text"
+          name="city-name"
+          id="city-name"
+          placeholder="--Nueva Ciudad--"
+        />
+      </div>
+      <div class="item-form item-form-buttons">
+        <button type="button" id="load-button" onclick="addNewCity()">
+          Cargar
+        </button>
+      </div>
+    </div>
+
+    <div class="container" id="city-weather">
+      <div class="main">
+        <div id="left-display">
+          <div id="intro"></div>
+          <h1 id="city"></h1>
+          <div id="temp"></div>
+          <div id="date"></div>
+        </div>
+        <div id="right-display">
+          <div id="icon-div"><img src="" alt="" id="icon" /></div>
+          <div id="description"></div>
+          <h2 id="temp-min"></h2>
+          <h2 id="temp-max"></h2>
+        </div>
+      </div>
+      <div id="footer-display">
+        <div id="feels-like"></div>
+        <div id="humidity"></div>
+        <div id="pressure"></div>
+        <div id="visibility"></div>
+      </div>
+    </div>
+  </body>
+</html>
