@@ -2,7 +2,7 @@
 
 # WEB CLIMA
 
-Web App para visualizaror el clima en diferentes partes del mundo
+Web App para visualizarar el clima en diferentes partes del mundo
 
 
 -----------------------------------------------------------------------------
