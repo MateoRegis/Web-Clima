@@ -1,7 +1,8 @@
 -----------------------------------------------------------------------------
 
-WEB CLIMA
+# WEB CLIMA
 
-Web App para visualizar el estado del clima en diferentes ciudades del mundo.
+Web App para visualizaror el clima en diferentes partes del mundo
+
 
 -----------------------------------------------------------------------------
